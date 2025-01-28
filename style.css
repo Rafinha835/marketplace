@@ -71,6 +71,17 @@ nav a:hover {
     width: 600px;
     height: 500px;
     border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transições para suavizar */
+}
+
+.imagem-produto:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+/* Efeito de sombra suave nas imagens */
+.imagem-produto.sombra:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais intensa */
 }
 
 .detalhes-produto {
@@ -119,16 +130,17 @@ nav a:hover {
     cursor: pointer;
     width: 100px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
 .btn-comprar:hover {
     background-color: #555;
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
 /* Estilo do rodapé */
 footer {
-    background-color:  rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -147,6 +159,7 @@ footer nav ul li {
     display: inline;
     margin: 0 10px;
 }
+
 /* Efeito de brilho azul escuro no rodapé */
 .footer {
     animation: glow-footer 1.5s ease-in-out infinite alternate;
@@ -161,13 +174,6 @@ footer nav ul li {
     }
 }
 
-
-iframe {
-    display: block;
-    margin: 0 auto; /* Centraliza o iframe */
-    max-width: 100%; /* Limita o tamanho máximo para não ultrapassar a caixa */
-    height: 500px; /* Mantém a altura do iframe conforme sua configuração */
-}
 /* Container que vai manter a imagem e o vídeo lado a lado */
 .midia-container {
     display: flex;
@@ -182,12 +188,30 @@ iframe {
     width: 600px; /* Definindo a largura igual para ambos */
     height: 600px; /* Definindo a altura igual para ambos */
     object-fit: cover; /* Para garantir que a imagem e o vídeo ocupem o espaço corretamente */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
-/* Imagem do produto */
- .video-produto {
+
+.imagem-produto:hover {
+    transform: scale(1.05); /* Leve aumento */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.video-produto {
     width: 300px; /* Definindo a largura igual para ambos */
     height: 300px; /* Definindo a altura igual para ambos */
     object-fit: cover; /* Para garantir que a imagem e o vídeo ocupem o espaço corretamente */
 }
 
+/* Efeito de suavização ao passar o mouse sobre o iframe */
+iframe {
+    display: block;
+    margin: 0 auto; /* Centraliza o iframe */
+    max-width: 100%; /* Limita o tamanho máximo para não ultrapassar a caixa */
+    height: 500px; /* Mantém a altura do iframe conforme sua configuração */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
 
+iframe:hover {
+    transform: scale(1.05); /* Leve aumento no tamanho do iframe */
+    filter: brightness(1.1); /* Aumenta o brilho ao passar o mouse */
+}
