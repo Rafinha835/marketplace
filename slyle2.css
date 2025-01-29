@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: #000000;
     color: #333;
 }
 header {
@@ -74,7 +74,7 @@ h1 {
     text-align: center;
     margin: 2rem 0;
     font-size: 2.5rem;
-    color: #000000;
+    color: #ffffff-;
 }
 
 /* Formulário de Cadastro */
