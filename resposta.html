@@ -27,54 +27,52 @@
             </div>
         </header>
 
-        <!-- Formulário de Cadastro -->
+        <!-- Exibição dos dados enviados via URL -->
         <main>
-            <form action="resposta.html" method="get" class="form-cadastro">
-                <div class="form-group">
-                    <label for="produto">Produto:</label>
-                    <input type="text" id="produto" name="produto" required>
-                </div>
+    
+            <div class="form-group">
+                <p>Produto: <span id="produto"></span></p>
+            </div>
 
                 <div class="form-group">
-                    <label for="qtde">Quantidade:</label>
-                    <input type="number" id="qtde" name="qtde" required>
-                </div>
+                <p>Quantidade: <span id="qtde"></span></p>
+            </div>
 
                 <div class="form-group">
-                    <label for="valor">Valor:</label>
-                    <input type="text" id="valor" name="valor" required>
-                </div>
+                <p>Valor: <span id="valor"></span></p>
+            </div>
 
                 <div class="form-group">
-                    <label for="forma_de_pgto">Forma de pagamento:</label>
-                    <input type="text" id="forma_de_pgto" name="forma_de_pgto" required>
-                </div>
+                <p>Forma de Pagamento: <span id="forma_de_pgto"></span></p>
+            </div>
 
                 <div class="form-group">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" required>
-                </div>
+                <p>Endereço: <span id="endereco"></span></p>
+            </div>
 
                 <div class="form-group">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" required>
-                </div>
+                <p>Cidade: <span id="cidade"></span></p>
+            </div>
 
                 <div class="form-group">
-                    <label for="estado">Estado:</label>
-                    <input type="text" id="estado" name="estado" required>
-                </div>
-
-                <!-- Botão de compra agora dentro do formulário -->
-                <div class="form-group">
-                    <button class="comprar-btn" type="submit">Finalizar</button>
-                </div>
-
-                <div class="form-group">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
+                <p>Estado: <span id="estado"></span></p>
+            </div>
         </main>
+
+        <!-- Script para capturar os parâmetros da URL -->
+        <script>
+            // Recupera os parâmetros da URL
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Atualiza os spans com os valores dos parâmetros
+            document.getElementById('produto').textContent = urlParams.get('produto');
+            document.getElementById('qtde').textContent = urlParams.get('qtde');
+            document.getElementById('valor').textContent = urlParams.get('valor');
+            document.getElementById('forma_de_pgto').textContent = urlParams.get('forma_de_pgto');
+            document.getElementById('endereco').textContent = urlParams.get('endereco');
+            document.getElementById('cidade').textContent = urlParams.get('cidade');
+            document.getElementById('estado').textContent = urlParams.get('estado');
+        </script>
 
         <!-- Rodapé -->
         <footer class="footer">
@@ -88,6 +86,7 @@
                 </ul>
             </nav>
         </footer>
-
+        
+            
     </body>
 </html>

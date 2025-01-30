@@ -90,6 +90,7 @@ form {
 
 .form-group {
     margin-bottom: 1rem;
+    color: aliceblue;
 }
 
 label {
@@ -224,7 +225,7 @@ nav a:hover {
 /* Efeito de hover */
 .produto:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgb(255, 255, 255);
 }
 
 .produto:hover img {
@@ -291,3 +292,6 @@ header .logo {
         box-shadow: 0 0 15px #00f, 0 0 25px #00f, 0 0 35px #00f, 0 0 50px #3333ff;
     }
 }
+
+
+
